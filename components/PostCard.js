@@ -22,28 +22,30 @@ import {
 
 const PostCard = ({item}) => {
     
-  likeIcon = item.liked ? 'heart' : 'heart-outline';
-  likeIconColor = item.liked ? '#2e64e5' : '#333';
+  // likeIcon = item.liked ? 'heart' : 'heart-outline';
+  // likeIconColor = item.liked ? '#2e64e5' : '#333';
 
 
   return (
-    <Card>
+    <Card >
     <UserInfo>
-      <UserImg source={item.userImg}/>
+      <UserImg source={require('../assets/image1.jpg')}/>
       <UserInfoText>
-      <UserName> {item.userName}</UserName>
-      <PostTime> {item.postTime}  </PostTime>
+      {/* <UserName> {}</UserName> */}
+      
+
+      {/* <PostTime> {}  </PostTime> */}
       </UserInfoText>
     </UserInfo>
-    <PostText>{item.post}</PostText>
-    <PostImg source={item.postImg }/>
+    <PostText>{item.title}</PostText>
+    <PostImg source={require('../assets/image1.jpg')}/>
     <InteractionWrapper>
-      <Interaction active={item.liked}>
-        <Ionicons name={likeIcon} size={25} color={likeIconColor}></Ionicons>
+      <Interaction>
+        {/* <Ionicons name={likeIcon} size={25} color={likeIconColor}></Ionicons> */}
         <Text>Like</Text>
       </Interaction>
       <Interaction>
-        <Ionicons name="md-chatbubble-outline" size={25}></Ionicons>
+        {/* <Ionicons name="md-chatbubble-outline" size={25}></Ionicons> */}
         <Text>Comment</Text>
       </Interaction>
     </InteractionWrapper>

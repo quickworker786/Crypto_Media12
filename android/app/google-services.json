@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977324479",
+    "project_id": "crypto-media-28759",
+    "storage_bucket": "crypto-media-28759.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977324479:android:3d9b508db1f817c7b8390a",
+        "android_client_info": {
+          "package_name": "com.cryptomedia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977324479-s129rpd5nns1u3p46bker4h5bu9ggi3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA27YTeqxh6bdqfhsmG2dRN9WxIBD7R8J8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977324479-s129rpd5nns1u3p46bker4h5bu9ggi3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

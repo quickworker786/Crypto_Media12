@@ -11,26 +11,28 @@ import {
 } from "react-native";
 
  import  { firebase }  from "../config";
-export default function Login({ navigation }) {
+
+export default function SignUp ({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
  
-loginUser = async(email,password) => {
+  const registerUser = async(email,password) => {
  try {
-    await firebase.auth().signInWithEmailAndPassword(email,password)
-    alert("Sign In succesfully")
-    navigation.navigate('HomeList', { name: 'Market' })
+    await firebase.auth().createUserWithEmailAndPassword(email,password)
+    alert("Account Created succesfully")
+     navigation.navigate('Login', { name: 'Login' })
 
  }catch(error){
     alert(error.message)
  }
 
 }
-
-
-
-
   return (
+    <>
+    <View>
+     <Text style={styles.loginText}>Create Account</Text>
+    </View>
+   
     <View style={styles.container}>
       {/* <Image style={styles.image} source={require('./assets/image1.jpg')} /> */}
  
@@ -54,19 +56,18 @@ loginUser = async(email,password) => {
         />
       </View>
  
-      <TouchableOpacity>
-        <Text style={styles.forgot_button}>Forgot Password?</Text>
-      </TouchableOpacity>
+    
  
       <TouchableOpacity style={styles.loginBtn}>
       
       {/* <Pressable onPress={() => navigation.navigate('HomeList', { name: 'Market' })} > */}
 
-      <Pressable onPress={() => loginUser(email,password)} >
-        <Text style={styles.loginText}>LOGIN</Text>
+      <Pressable onPress={() => registerUser(email,password)} >
+        <Text style={styles.loginText}>Create Account</Text>
         </Pressable>
       </TouchableOpacity>
     </View>
+    </>
   );
 }
  
